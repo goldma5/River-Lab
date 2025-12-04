@@ -1,70 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rivera Lab of Mathematical Cognition</title>
-
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* ---------- COLORS ---------- */
+    :root {
+      --primary-color: #000000; /* Black */
+      --accent-color: #FFD700;  /* Gold */
+      --background-color: #f8f8f8;
+      --section-bg: #ffffff;
+    }
+
+    /* ---------- GLOBAL ---------- */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f9fafb;
-      color: #222;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--primary-color);
       line-height: 1.6;
     }
 
-    header {
-      background: #143a7b;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    nav {
-      background: #e7ecf7;
-      padding: 0.75rem;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 1rem;
+    a {
+      color: var(--accent-color);
       text-decoration: none;
-      color: #143a7b;
-      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    h2 {
-      color: #143a7b;
-      margin-top: 2rem;
-    }
-
-    .section-box {
-      background: white;
-      padding: 1.25rem 1.5rem;
-      border-left: 5px solid #143a7b;
-      margin: 1.2rem 0;
-      border-radius: 4px;
-    }
-
-    footer {
-      background: #143a7b;
-      color: white;
-      padding: 1rem;
+    /* ---------- HEADER ---------- */
+    header {
+      background: var(--primary-color);
+      color: var(--accent-color);
+      padding: 3rem 1rem;
       text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      background: var(--accent-color);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0.5rem 1rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #333;
+    }
+
+    /* ---------- MAIN CONTAINER ---------- */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: var(--section-bg);
+      border-left: 6px solid var(--accent-color);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    /* ---------- PARTICIPATE BUTTON ---------- */
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      margin-top: 1rem;
+      background: var(--primary-color);
+      color: var(--accent-color);
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn:hover {
+      background: var(--accent-color);
+      color: var(--primary-color);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--primary-color);
+      color: var(--accent-color);
+      text-align: center;
+      padding: 1rem;
       margin-top: 3rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav a { margin: 0.5rem; }
     }
   </style>
 </head>
-
 <body>
+
   <header>
     <h1>Rivera Lab of Mathematical Cognition</h1>
     <p>Exploring how humans understand, reason with, and learn mathematics</p>
@@ -83,58 +148,39 @@
     <!-- PURPOSE -->
     <section id="purpose">
       <h2>Purpose</h2>
-      <div class="section-box">
-        <p>
-         Our lab investigates the neurocognitive processes underlying numerical cognition.
+      <p>
+        Our lab investigates the neurocognitive processes underlying numerical cognition.
 Specifically, we are examining whether an arithmetic N400 component (a brain wave
 associated with processing meaningful information) exists across various mathematical
 operations including addition, subtraction, multiplication, division, fractions, complex
 numbers, and algebraic equations. This research may help us better understand how the
 brain represents and processes mathematical information.
-        </p>
-      </div>
+      </p>
     </section>
 
     <!-- WORKS -->
     <section id="works">
       <h2>Works</h2>
-      <div class="section-box">
-        <p><em>In progress.</em></p>
-      </div>
+      <p><em>In progress.</em></p>
     </section>
 
     <!-- PEOPLE -->
     <section id="people">
       <h2>People</h2>
-      <div class="section-box">
-        <p><em>In progress.</em></p>
-      </div>
+      <p><em>In progress.</em></p>
     </section>
 
     <!-- PARTICIPATE -->
     <section id="participate">
       <h2>Participate</h2>
-      <div class="section-box">
-        <p>
-          Interested in participating in our research?  
-          Please complete our participation form:
-        </p>
-        <p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6IAw19oDUYkIo8mZkdOTkr74XWhtmpu99b-jTS6MwtOf8XA/viewform?usp=header" 
-             target="_blank"
-             style="font-weight: bold; color: #143a7b;">
-            Participation Form
-          </a>
-        </p>
-      </div>
+      <p>Interested in participating in our research? Please complete our participation form:</p>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc6IAw19oDUYkIo8mZkdOTkr74XWhtmpu99b-jTS6MwtOf8XA/viewform?usp=header" target="_blank">Participation Form</a>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
-      <div class="section-box">
-        <p>Email: <strong>rivera21@stolaf.edu</strong></p>
-      </div>
+      <p>Email: <strong>rivera21@stolaf.edu</strong></p>
     </section>
 
   </div>
@@ -142,5 +188,6 @@ brain represents and processes mathematical information.
   <footer>
     © 2025 Rivera Lab of Mathematical Cognition
   </footer>
+
 </body>
 </html>
